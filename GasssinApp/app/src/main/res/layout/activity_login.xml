@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login"
+    android:background="#5B3A00">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginRight="40dp">
+
+        <ImageView
+            android:id="@+id/gassinlogin"
+            android:layout_width="75dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/logoshadow" />
+
+        <TextView
+            android:id="@+id/gassinkuy"
+            android:layout_width="232dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/bangers"
+            android:text="gasssin kuy"
+            android:textColor="#EAB242"
+            android:textSize="40sp"></TextView>
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gassinlogin"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Username"
+                    android:textAllCaps="true"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"></TextView>
+
+                <EditText
+                    android:id="@+id/txt_username"
+                    android:layout_width="match_parent"
+                    android:fontFamily="sans-serif-light"
+                    android:background="@drawable/et_bg"
+                    android:layout_marginTop="15dp"
+                    android:layout_height="40dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textColor="#EAB242"
+                    android:textSize="15sp"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/Password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="PASSWORD"
+                    android:textAllCaps="true"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp"></TextView>
+
+                <EditText
+                    android:id="@+id/txt_password"
+                    android:background="@drawable/et_bg"
+                    android:layout_width="match_parent"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:textColor="#EAB242"
+                    android:textSize="15sp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:password="true"
+                    android:singleLine="true" />
+            </LinearLayout>
+        </LinearLayout>
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_login"
+            android:fontFamily="sans-serif-black"
+            android:text="Sign In"
+            android:textColor="#5B3A00"
+            android:textAllCaps="false"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"
+            android:layout_below="@id/linear1"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp">
+        <Button
+            android:id="@+id/signup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:background="@color/transparent"
+            android:fontFamily="sans-serif"
+            android:text="SIGN UP"
+            android:textAllCaps="false"
+            android:textColor="#EAB242">
+        </Button>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:layout_alignParentRight="true"
+            android:fontFamily="sans-serif"
+            android:text="FORGOT PASSWORD"
+            android:textAllCaps="false"
+            android:textColor="#EAB242">
+        </Button>
+    </RelativeLayout>
+</RelativeLayout>

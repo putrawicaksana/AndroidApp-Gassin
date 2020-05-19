@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#5B3A00">
+    <TextView
+        android:id="@+id/slogangassin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="330dp"
+        android:layout_marginLeft="115dp"
+        android:layout_marginRight="55dp"
+        android:fontFamily="sans-serif-light"
+        android:text="hello"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textSize="35sp" />
+
+    <ImageView
+        android:id="@+id/gambargassin"
+        android:layout_below="@+id/slogangassin"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="85dp"
+        android:layout_marginRight="55dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/mobile_logo" />
+
+</RelativeLayout>

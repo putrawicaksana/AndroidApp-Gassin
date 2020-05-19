@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#5B3A00"
+    tools:context=".Beranda">
+    <ImageButton
+        android:id="@+id/profile"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="15dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/transparent"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/profile">
+    </ImageButton>
+    <ImageView
+        android:id="@+id/gassinberanda"
+        android:layout_width="50dp"
+        android:layout_margin="15dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:src="@drawable/logoshadow">
+    </ImageView>
+    <ImageView
+        android:id="@+id/gassinshot"
+        android:layout_width="205dp"
+        android:layout_height="75dp"
+        android:layout_below="@id/gassinberanda"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/mobile_logo"></ImageView>
+    <TextView
+        android:id="@+id/sloganshot"
+        android:layout_below="@+id/gassinshot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="find masterpiece from best students"
+        android:textAlignment="center">
+    </TextView>
+    <ImageView
+        android:id="@+id/sample1"
+        android:layout_below="@+id/sloganshot"
+        android:src="@drawable/sample1"
+        android:layout_margin = "30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="350dp"
+        android:layout_height="230dp">
+    </ImageView>
+</RelativeLayout>
