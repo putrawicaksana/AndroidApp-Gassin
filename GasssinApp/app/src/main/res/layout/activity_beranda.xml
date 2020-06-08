@@ -42,13 +42,15 @@
         android:text="find masterpiece from best students"
         android:textAlignment="center">
     </TextView>
-    <ImageView
-        android:id="@+id/sample1"
-        android:layout_below="@+id/sloganshot"
-        android:src="@drawable/sample1"
-        android:layout_margin = "30dp"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleview"
+        android:layout_below="@id/sloganshot"
         android:layout_centerHorizontal="true"
-        android:layout_width="350dp"
-        android:layout_height="230dp">
-    </ImageView>
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:layout_width="330dp"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="745dp"
+        tools:layout_editor_absoluteY="-51dp"
+        />
 </RelativeLayout>

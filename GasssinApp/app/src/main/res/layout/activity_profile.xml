@@ -22,13 +22,22 @@
         android:layout_centerHorizontal="true"
         android:orientation="vertical">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/logo"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:layout_gravity="center"
             android:background="@mipmap/ic_launcher" />
-
+        <Button
+            android:id="@+id/btn_editimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColor="#EAB242"
+            android:layout_gravity="center"
+            android:background="@color/transparent"
+            android:text="Edit Image"
+            android:textStyle="bold" />
         <TextView
             android:id="@+id/txt_id"
             android:layout_width="wrap_content"
