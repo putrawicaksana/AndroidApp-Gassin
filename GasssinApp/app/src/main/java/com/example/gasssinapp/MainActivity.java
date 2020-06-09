@@ -3,6 +3,7 @@ package com.example.gasssinapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.WindowManager;
@@ -18,6 +19,8 @@ public class MainActivity extends AppCompatActivity
     Animation topAnim, bottomAnim;
     ImageView image;
     TextView slogan1;
+    SharedPreferences sharedpreferences;
+    Boolean session = false;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -40,9 +43,15 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void run()
             {
-                Intent intent = new Intent(MainActivity.this,Login.class);
-                startActivity(intent);
-                finish();
+                if(session){
+                    Intent intent = new Intent(MainActivity.this, Beranda.class);
+                    startActivity(intent);
+                    finish();
+                }else {
+                    Intent intent = new Intent(MainActivity.this, Login.class);
+                    startActivity(intent);
+                    finish();
+                }
             }
         },SPLASH_SCREEN);
     }

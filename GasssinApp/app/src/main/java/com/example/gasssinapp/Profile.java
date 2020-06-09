@@ -32,8 +32,8 @@ public class Profile extends AppCompatActivity
 
         sharedpreferences = getSharedPreferences(Login.my_shared_preferences, Context.MODE_PRIVATE);
 
-        id = getIntent().getStringExtra(TAG_ID);
-        username = getIntent().getStringExtra(TAG_USERNAME);
+        id = sharedpreferences.getString(TAG_ID,null);
+        username = sharedpreferences.getString(TAG_USERNAME,null);
 
         txt_id.setText("" + id);
         txt_username.setText("" + username);
