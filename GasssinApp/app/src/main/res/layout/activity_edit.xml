@@ -24,12 +24,18 @@
             android:layout_centerHorizontal="true"
             android:src="@drawable/user" />
 
-
+        <Button
+            android:id="@+id/foto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gassinlogin"
+            android:text="ganti foto"
+            android:layout_centerHorizontal="true"/>
         <LinearLayout
             android:id="@+id/linear1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/gassinlogin"
+            android:layout_below="@id/foto"
             android:layout_marginTop="10dp"
             android:orientation="vertical">
 

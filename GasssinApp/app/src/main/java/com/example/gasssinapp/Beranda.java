@@ -29,11 +29,16 @@ import java.util.List;
 
 public class Beranda extends AppCompatActivity implements ProductAdapter.OnItemClickListener
 {
+    public static final String EXTRA_URL = "imgurl";
+    public static final String EXTRA_TITLE = "title";
+    public static final String EXTRA_SHORTDESC = "shortdesc";
+    public static final String EXTRA_USER = "user";
+    public static final String EXTRA_PLATFORM = "platform";
+
     private Animation topAnim;
     private ImageView gassinshots, sample1;
     private ImageButton profile;
     private TextView sloganshots;
-
     private String url = Constant.URL+ "karya.php";
 
     List<Product> productList;
@@ -120,6 +125,13 @@ public class Beranda extends AppCompatActivity implements ProductAdapter.OnItemC
     @Override
     public void onItemClick(int position) {
         Intent popintent = new Intent(this, Pop.class);
+        Product itemklik = productList.get(position);
+
+        popintent.putExtra(EXTRA_URL,itemklik.getImage());
+        popintent.putExtra(EXTRA_TITLE,itemklik.getTitle());
+        popintent.putExtra(EXTRA_SHORTDESC,itemklik.getShortdesc());
+        popintent.putExtra(EXTRA_USER,itemklik.getRating());
+        popintent.putExtra(EXTRA_PLATFORM,itemklik.getPrice());
 
         startActivity(popintent);
     }
