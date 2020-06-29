@@ -43,6 +43,7 @@ public class Login extends AppCompatActivity
     private static final String TAG_SUCCESS = "success";
     private static final String TAG_MESSAGE = "message";
 
+    public final static String TAG_PASSWORD = "password";
     public final static String TAG_USERNAME = "username";
     public final static String TAG_ID = "id";
 
@@ -50,7 +51,7 @@ public class Login extends AppCompatActivity
 
     SharedPreferences sharedpreferences;
     Boolean session = false;
-    String id, username;
+    String id, username,pass;
     public static final String my_shared_preferences = "my_shared_preferences";
     public static final String session_status = "session_status";
 
@@ -80,6 +81,7 @@ public class Login extends AppCompatActivity
         session = sharedpreferences.getBoolean(session_status, false);
         id = sharedpreferences.getString(TAG_ID, null);
         username = sharedpreferences.getString(TAG_USERNAME, null);
+        pass = sharedpreferences.getString(TAG_PASSWORD,null);
 
         if (session) {
             Intent intent = new Intent(Login.this, Profile.class);
@@ -144,6 +146,7 @@ public class Login extends AppCompatActivity
                     if (success == 1) {
                         String username = jObj.getString(TAG_USERNAME);
                         String id = jObj.getString(TAG_ID);
+                        String pass = password;
 
                         Log.e("Successfully Login!", jObj.toString());
 
@@ -154,6 +157,7 @@ public class Login extends AppCompatActivity
                         editor.putBoolean(session_status, true);
                         editor.putString(TAG_ID, id);
                         editor.putString(TAG_USERNAME, username);
+                        editor.putString(TAG_PASSWORD,pass);
                         editor.commit();
 
                         // Memanggil main activity

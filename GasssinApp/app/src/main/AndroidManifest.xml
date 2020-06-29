@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".Profile"></activity>
+        <activity android:name=".Edit"></activity>
+        <activity android:name=".Profile" />
         <activity android:name=".Beranda" />
         <activity android:name=".Register" />
         <activity android:name=".Login" />
@@ -24,9 +25,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Pop"
+            android:theme="@style/AppTheme.Customtheme"></activity>
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
+
 </manifest>

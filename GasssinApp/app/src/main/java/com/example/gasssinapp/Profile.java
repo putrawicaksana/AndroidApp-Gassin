@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 public class Profile extends AppCompatActivity
 {
-    Button btn_logout;
+    Button btn_logout,btn_edit;
     ImageButton back;
     TextView txt_id, txt_username;
     String id, username;
@@ -28,6 +28,7 @@ public class Profile extends AppCompatActivity
         txt_id = (TextView) findViewById(R.id.txt_id);
         txt_username = (TextView) findViewById(R.id.txt_username);
         btn_logout = (Button) findViewById(R.id.btn_logout);
+        btn_edit = (Button) findViewById(R.id.btn_editimage);
         back = (ImageButton) findViewById(R.id.backberanda);
 
         sharedpreferences = getSharedPreferences(Login.my_shared_preferences, Context.MODE_PRIVATE);
@@ -61,6 +62,14 @@ public class Profile extends AppCompatActivity
             {
                 Intent intentback = new Intent(Profile.this,Beranda.class);
                 startActivity(intentback);
+            }
+        });
+        btn_edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                Intent edit = new Intent(Profile.this,Edit.class);
+                startActivity(edit);
             }
         });
     }

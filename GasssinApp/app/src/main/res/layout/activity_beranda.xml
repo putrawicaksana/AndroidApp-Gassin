@@ -31,7 +31,7 @@
         android:layout_height="75dp"
         android:layout_below="@id/gassinberanda"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="0dp"
         android:src="@drawable/mobile_logo"></ImageView>
     <TextView
         android:id="@+id/sloganshot"

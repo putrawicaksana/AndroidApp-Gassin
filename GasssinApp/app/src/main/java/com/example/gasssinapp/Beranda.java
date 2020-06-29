@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -26,7 +27,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Beranda extends AppCompatActivity
+public class Beranda extends AppCompatActivity implements ProductAdapter.OnItemClickListener
 {
     private Animation topAnim;
     private ImageView gassinshots, sample1;
@@ -55,11 +56,11 @@ public class Beranda extends AppCompatActivity
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         productList = new ArrayList<>();
         loadProducts();
-
+        /*
         gassinshots.setAnimation(topAnim);
         sample1.setAnimation(topAnim);
         sloganshots.setAnimation(topAnim);
-
+        */
         profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
@@ -98,6 +99,7 @@ public class Beranda extends AppCompatActivity
                             //creating adapter object and setting it to recyclerview
                             ProductAdapter adapter = new ProductAdapter(Beranda.this, productList);
                             recyclerView.setAdapter(adapter);
+                            ProductAdapter.setOnItemClickListener(Beranda.this);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -112,5 +114,13 @@ public class Beranda extends AppCompatActivity
 
         //adding our stringrequest to queue
         Volley.newRequestQueue(this).add(stringRequest);
+    }
+
+
+    @Override
+    public void onItemClick(int position) {
+        Intent popintent = new Intent(this, Pop.class);
+
+        startActivity(popintent);
     }
 }

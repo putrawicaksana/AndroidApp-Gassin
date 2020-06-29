@@ -16,8 +16,17 @@ import java.util.List;
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductViewHolder>
 {
+    private static OnItemClickListener mListener;
     private Context mCtx;
     private List<Product> productList;
+
+    public interface OnItemClickListener{
+        void onItemClick(int position);
+    }
+
+    public static void setOnItemClickListener(OnItemClickListener listener) {
+        mListener = listener;
+    }
 
     public ProductAdapter(Context mCtx, List<Product> productList) {
         this.mCtx = mCtx;
@@ -63,6 +72,18 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
             textViewRating = itemView.findViewById(R.id.textViewRating);
             textViewPrice = itemView.findViewById(R.id.textViewPrice);
             imageView = itemView.findViewById(R.id.imageView);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (mListener != null){
+                        int position = getAdapterPosition();
+                        if(position!=RecyclerView.NO_POSITION){
+                            mListener.onItemClick(position);
+                        }
+                    }
+                }
+            });
         }
     }
 }

@@ -67,6 +67,5 @@
             android:layout_centerHorizontal="true"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
             android:textStyle="bold" />
-
     </RelativeLayout>
 </LinearLayout>
